@@ -166,8 +166,7 @@ export default function IssuePage() {
             className="border rounded px-3 py-2 flex-1"
           >
             {states.map((s) => (
-              <option key={s.id} value={s.id}>
-                {s.name}
+              <option key={s.id} value={s.id}>   {s.name}
               </option>
             ))}
           </select>
@@ -180,12 +179,12 @@ export default function IssuePage() {
               <option key={value} value={value}>
                 {label}
               </option>
-            ))}
+            ))}   
           </select>
         </div>
         <div className="flex gap-2">
           <button type="submit" className="bg-blue-600 text-white rounded px-4 py-2 flex-1">
-            Сохранить
+            Сохранить.
           </button>
           <button
             type="button"
@@ -196,7 +195,6 @@ export default function IssuePage() {
           </button>
         </div>
       </form>
-
       {message && <p className="text-green-600 text-sm mt-2">{message}</p>}
       {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
              <AssigneesSection issuePath={issuePath} slug={params.slug} />
